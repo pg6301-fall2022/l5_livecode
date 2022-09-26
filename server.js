@@ -1,6 +1,8 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
+app.use(bodyParser.json());
 
 app.get("/login", (req, res) => {
     res.json({
@@ -8,10 +10,25 @@ app.get("/login", (req, res) => {
     });
 });
 
+const USERS = [
+    {
+        username: "admin",
+        password: "secret"
+    }
+];
+
 app.post("/login", (req, res) =>{
     // POST sends data client -> server
-    console.log("Test");
-    res.sendStatus(200);
+    // somewhere here - i know that there is a request with info in the body
+
+    const body = req.body;
+    const { username, password } = body;
+
+    if(USERS.find(u => u.username === username).password === password){
+        res.sendStatus(200);
+    } else {
+        res.sendStatus(401);
+    }
 });
 
 const server = app.listen(

@@ -1,11 +1,11 @@
 # Lecture 5 - Express
 
-* [ ] Respond to simple requests
-  *  [ ] GET
-  *  [ ] POST
-*  [ ] JSON
+* [x] respond to simple requests
+  *  [x] GET
+  *  [x] POST
+*  [x] JSON
+*  [x] Cookies
 *  [ ] Static files
-*  [ ] Cookies
 *  [ ] Middleware ?
 *  [ ] Routes
 *  [ ] Some testing of this stuff

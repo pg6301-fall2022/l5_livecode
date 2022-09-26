@@ -5,7 +5,7 @@
   *  [x] POST
 *  [x] JSON
 *  [x] Cookies
-*  [ ] Static files
+*  [x] Static files
 *  [ ] Middleware ?
 *  [ ] Routes
 *  [ ] Some testing of this stuff

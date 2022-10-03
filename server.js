@@ -59,9 +59,16 @@ app.post("/login", (req, res) =>{
 
 app.use(express.static("public"));
 
+function loginMiddleware(req, res, next) {
+    res.user = USERS.find(u => u.username === req.username);
+    next();
+}
+
+app.use(loginMiddleware);
+
 const server = app.listen(
      process.env.PORT || 3000,
     () => {
-        console.log("I have started!");
+        console.log(`I have started! On: http://localhost:${server.address().port}`);
     }
 );

@@ -9,6 +9,3 @@ Content-Type: application/json
   "password": "NOTsecret",
   "fullname": "Testsson"
 }
-
-###
-GET {{server}}/users

@@ -20,17 +20,9 @@ export const USERS = [
 
 loginPath.get("/", (req, res) => {
 
-    const cookieUsername = req.signedCookies.username;
-
-    if(!cookieUsername) {
-        return res.sendStatus(401);
-    }
-
-    const user = USERS.find(u => u.username === cookieUsername);
-
-    const {username, fullname } = user;
-
-    res.json({username, fullname});
+    const { username } = req.signedCookies;
+    const user = USERS.find(u => u.username === username);
+    res.json(user);
 
 });
 
@@ -74,6 +66,6 @@ usersPath.post("/", (req, res) => {
 });
 
 export function loginMiddleware(req, res, next) {
-    res.user = USERS.find(u => u.username === req.signedCookies.username);
+    res.user = USERS.find(u => u.username === req.signedCookies?.username);
     next();
 }

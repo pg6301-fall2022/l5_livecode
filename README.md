@@ -6,6 +6,6 @@
 *  [x] JSON
 *  [x] Cookies
 *  [x] Static files
-*  [ ] Middleware ?
-*  [ ] Routes
+*  [x] Middleware ?
+*  [x] Routes
 *  [ ] Some testing of this stuff

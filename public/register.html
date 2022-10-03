@@ -5,6 +5,14 @@
     <title>Register</title>
 </head>
 <body>
-  <h1> Register goes here </h1>
+  <h1> Register new user </h1>
+    <div>
+        <form action="/users" method="post">
+            <div>Username: <input type="text" name="username" /></div>
+            <div>Password: <input type="password" name="password" /> </div>
+            <div>Full Name: <input type="text" name="fullname" /></div>
+            <div><button>Register</button></div>
+        </form>
+    </div>
 </body>
 </html>

@@ -6,16 +6,6 @@ export const usersPath = new express.Router();
 
 
 export const USERS = [
-    {
-        username: "admin",
-        password: "NOTsecret",
-        fullname: "Testsson"
-    },
-    {
-        username: "otheruser",
-        password: "secret?",
-        fullname: "Some Other"
-    }
 ];
 
 loginPath.get("/", (req, res) => {

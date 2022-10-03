@@ -15,6 +15,12 @@ app.use("/users", usersPath);
 
 describe("test suite for paths", () => {
 
+    beforeAll( async () => {
+        await request(app)
+            .post("/users")
+            .send({username: "admin", password: "NOTsecret", fullname: "Testsson"});
+    });
+
     it("fails to login with unknown user", async () => {
         const response = await request(app)
             .post("/login")
